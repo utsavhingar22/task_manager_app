@@ -1,16 +1,50 @@
-# taskmanager
+# Task Management App
 
-A new Flutter project.
+A **Task Management App** built using Flutter, featuring user authentication, task creation, editing, and real-time synchronization with an API.
 
-## Getting Started
+## 🚀 Features
+- User Authentication (Login & Registration using ReqRes API)
+- Create, Edit, and Delete Tasks
+- Real-time Sync with API (JSONPlaceholder API)
+- Local Storage (Hive/SQLite) for Offline Access
+- Optimized Performance & Clean Architecture
+- Modern UI with Google Fonts and Theming
 
-This project is a starting point for a Flutter application.
+## 🛠️ Tech Stack
+- **Flutter** (Dart)
+- **State Management:** Riverpod
+- **Local Storage:** Hive / SQLite
+- **Networking:** Dio
+- **Offline Sync:** WorkManager
+- **UI/UX:** Google Fonts, Custom Theming
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Getting Started
+### Prerequisites
+- Flutter SDK installed
+- Android Studio / VS Code
+- Emulator or Physical Device
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 🔧 Installation
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/utsavhingar22/task_manager_app.git
+   cd task-management-app
+   ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2. **Install dependencies:**
+   ```sh
+   flutter pub get
+   ```
+
+3. **Run the app:**
+   ```sh
+   flutter run
+   ```
+
+## 🌟 API References
+- [ReqRes API (Authentication)](https://reqres.in/)
+- [JSONPlaceholder API (Tasks)](https://jsonplaceholder.typicode.com/)
+
+## 🤝 Contribution
+Feel free to contribute! Fork the repo, make changes, and submit a pull request.
+
