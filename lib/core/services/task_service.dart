@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import '../models/task_model.dart';
 
 class TaskService {
@@ -14,7 +15,9 @@ class TaskService {
         return data.map((json) => Task.fromJson(json)).toList();
       }
     } catch (e) {
-      print("Error fetching tasks: $e");
+      if (kDebugMode) {
+        print("Error fetching tasks: $e");
+      }
     }
     return [];
   }
@@ -27,7 +30,9 @@ class TaskService {
         return Task.fromJson(response.data);
       }
     } catch (e) {
-      print("Error creating task: $e");
+      if (kDebugMode) {
+        print("Error creating task: $e");
+      }
     }
     return null;
   }
@@ -38,7 +43,9 @@ class TaskService {
       final response = await _dio.put("$baseUrl/${task.id}", data: task.toJson());
       return response.statusCode == 200;
     } catch (e) {
-      print("Error updating task: $e");
+      if (kDebugMode) {
+        print("Error updating task: $e");
+      }
     }
     return false;
   }
@@ -49,7 +56,9 @@ class TaskService {
       final response = await _dio.delete("$baseUrl/$id");
       return response.statusCode == 200;
     } catch (e) {
-      print("Error deleting task: $e");
+      if (kDebugMode) {
+        print("Error deleting task: $e");
+      }
     }
     return false;
   }

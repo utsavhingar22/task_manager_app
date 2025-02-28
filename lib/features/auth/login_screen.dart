@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: use_build_context_synchronously
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -31,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (token != null) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => TaskListScreen()),
+        MaterialPageRoute(builder: (_) => const TaskListScreen()),
       );
     }
   }
@@ -64,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
         // Navigate to TaskListScreen and remove all previous screens from stack
         Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(builder: (_) => TaskListScreen()),
+          MaterialPageRoute(builder: (_) => const TaskListScreen()),
               (Route<dynamic> route) => false, // Remove all routes from stack
         );
       }
